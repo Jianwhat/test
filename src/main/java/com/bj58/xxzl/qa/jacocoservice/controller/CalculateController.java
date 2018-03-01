@@ -14,5 +14,14 @@ public class CalculateController {
         } else
             return a / b;
     }
+    @RequestMapping(value = "/min", method = RequestMethod.GET)
+    public int getMins(@RequestParam int a, @RequestParam int b) {
+        if (a == 0 && b == 0) {
+            return 0;
+        } else if (a == 0 || b == 0) {
+            return a -b;
+        } else
+            return a / b;
+    }
 
 }
